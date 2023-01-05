@@ -22,7 +22,7 @@ class SeleniumDemo {
         driver = new ChromeDriver(options);
         driver.navigate().to("https://the-internet.herokuapp.com/login");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
+        //driver.manage().timeouts().implicitlyWait(120, TimeUnit.MILLISECONDS);
     }
 
     @Test
