@@ -5,12 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class SeleniumDemo {
 
-    @BeforeClass
+    @BeforeEach
     public void setUp()
     {
         WebDriverManager.chromedriver().setup();
@@ -36,7 +37,7 @@ class SeleniumDemo {
         Assert.assertTrue(driver.getCurrentUrl().contains("secure"));
     }
     
-    @AfterClass
+    @AfterEach
     public void tearDown(){
         if (driver != null) {
             driver.quit();
