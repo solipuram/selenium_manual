@@ -7,9 +7,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
 class SeleniumDemo {
-
+    private WebDriver driver;
     @BeforeEach
     public void setUp()
     {
