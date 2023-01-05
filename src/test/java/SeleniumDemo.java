@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,9 +11,15 @@ class SeleniumDemo {
 
     WebDriver driver;
 
+    @BeforeAll
+    static void setupAll() {
+        WebDriverManager.chromedriver().setup();
+    }
+
+
     @BeforeEach
     void setup() {
-        driver = WebDriverManager.chromedriver().create();
+        driver = new ChromeDriver();
     }
     @Test
     void test() {
