@@ -3,7 +3,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import static org.assertj.core.api.Assertions.assertThat;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 class SeleniumDemo {
