@@ -14,16 +14,17 @@ class SeleniumDemo {
     void setup() {
         driver = WebDriverManager.chromedriver().create();
     }
+    @Test
+    void test() {
+        driver.get("https://www.jenkins.io/");
+        assertThat(driver.getTitle()).contains("Jenkins");
+    }
 
     @AfterEach
     void teardown() {
         driver.quit();
     }
 
-    @Test
-    void test() {
-        driver.get("https://www.jenkins.io/");
-        assertThat(driver.getTitle()).contains("Jenkins");
-    }
+   
 
 }
