@@ -8,10 +8,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 class SeleniumDemo {
     private WebDriver driver;
-    @BeforeEach
+    
+    @BeforeClass
     public void setUp()
     {
         WebDriverManager.chromedriver().setup();
@@ -37,7 +41,7 @@ class SeleniumDemo {
         Assert.assertTrue(driver.getCurrentUrl().contains("secure"));
     }
     
-    @AfterEach
+    @AfterClass
     public void tearDown(){
         if (driver != null) {
             driver.quit();
